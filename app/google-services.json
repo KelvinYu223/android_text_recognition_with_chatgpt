@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "809117174054",
+    "project_id": "mytextrecognition-25d21",
+    "storage_bucket": "mytextrecognition-25d21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809117174054:android:ad6d505d12a0aa74d6d9e7",
+        "android_client_info": {
+          "package_name": "com.example.mytextrecognition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809117174054-39jaisipsvg4jm9h9qsjtfujha3ujclu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfRpJ0mPzysvaXqEk6HREZMwGDday318s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809117174054-39jaisipsvg4jm9h9qsjtfujha3ujclu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
