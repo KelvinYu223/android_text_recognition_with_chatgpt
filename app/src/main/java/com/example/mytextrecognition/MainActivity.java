@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         imageView = findViewById(R.id.img);
         detectedText = findViewById(R.id.detectedText);
         btn_detect = findViewById(R.id.button_detect);
@@ -107,8 +107,6 @@ public class MainActivity extends AppCompatActivity {
                                         Toast.makeText(MainActivity.this, "Failed to detected text.....", Toast.LENGTH_SHORT).show();
                                     }
                                 });
-
-
     }
 
 //    public void processTxt(FirebaseVisionText text) {
