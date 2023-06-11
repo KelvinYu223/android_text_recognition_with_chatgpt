@@ -81,22 +81,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void detect() {
-        InputImage image = InputImage.fromBitmap(imageBitmap, 0);
-        TextRecognizer recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
-        Task<Text> result =
-                recognizer.process(image)
-                        .addOnSuccessListener(new OnSuccessListener<Text>() {
-                            @Override
-                            public void onSuccess(Text visionText) {
-                                Toast.makeText(MainActivity.this, "Text detected successful....", Toast.LENGTH_SHORT).show();
-                                detectedText.setText(visionText.getText());
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(MainActivity.this, "Failed to detected text.....", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+        if (imageBitmap !=null){
+            InputImage image = InputImage.fromBitmap(imageBitmap, 0);
+            TextRecognizer recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
+            Task<Text> result =
+                    recognizer.process(image)
+                            .addOnSuccessListener(new OnSuccessListener<Text>() {
+                                @Override
+                                public void onSuccess(Text visionText) {
+                                    Toast.makeText(MainActivity.this, "Text detected successful....", Toast.LENGTH_SHORT).show();
+                                    detectedText.setText(visionText.getText());
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(MainActivity.this, "Failed to detected text.....", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+        }
+        else {
+            Toast.makeText(MainActivity.this, "Failed to detected text.....", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
