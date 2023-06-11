@@ -92,12 +92,11 @@ public class MainActivity extends AppCompatActivity {
                                 detectedText.setText(visionText.getText());
                             }
                         })
-                        .addOnFailureListener(
-                                new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(MainActivity.this, "Failed to detected text.....", Toast.LENGTH_SHORT).show();
-                                    }
-                                });
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(MainActivity.this, "Failed to detected text.....", Toast.LENGTH_SHORT).show();
+                            }
+                        });
     }
 }
