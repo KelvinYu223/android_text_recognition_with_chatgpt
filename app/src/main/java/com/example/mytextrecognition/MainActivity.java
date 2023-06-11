@@ -81,14 +81,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void detect() {
-//        FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(imageBitmap);
-//        FirebaseVisionTextRecognizer detector = FirebaseVision.getInstance().getCloudTextRecognizer();
-//        detector.processImage(image).addOnSuccessListener(firebaseVisionText -> processTxt(firebaseVisionText)).addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(MainActivity.this, "Fail to detect the text from image..", Toast.LENGTH_SHORT).show();
-//            }
-//        });
         InputImage image = InputImage.fromBitmap(imageBitmap, 0);
         TextRecognizer recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
         Task<Text> result =
@@ -108,17 +100,4 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                 });
     }
-
-//    public void processTxt(FirebaseVisionText text) {
-//        List<FirebaseVisionText.TextBlock> blocks = text.getTextBlocks();
-//        if (blocks.size() == 0) {
-//            Toast.makeText(MainActivity.this, "No Text ", Toast.LENGTH_LONG).show();
-//            return;
-//        }
-//
-//        for (FirebaseVisionText.TextBlock block : text.getTextBlocks()) {
-//            String txt = block.getText();
-//            detectedText.setText(txt);
-//        }
-//    }
 }
