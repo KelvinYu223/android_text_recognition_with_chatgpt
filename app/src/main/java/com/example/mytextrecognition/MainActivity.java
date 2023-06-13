@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }else {
-            Toast.makeText(this, "Please Select A Image....", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select an image or take picture....", Toast.LENGTH_SHORT).show();
         }
     }
 
