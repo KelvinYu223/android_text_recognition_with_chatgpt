@@ -65,12 +65,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-            Uri imageUri = data.getData();
-        try {
-            imageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
-            imageView.setImageBitmap(imageBitmap);
-        } catch (IOException e) {
-            e.printStackTrace();
+        assert data != null;
+        Uri imageUri = data.getData();
+        if (imageUri!=null){
+            try {
+                imageBitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+                imageView.setImageBitmap(imageBitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else {
+            Toast.makeText(this, "Please Select A Image....", Toast.LENGTH_SHORT).show();
         }
     }
 
