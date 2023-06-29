@@ -10,7 +10,9 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="-29dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -49,6 +51,7 @@
 
                         <TextView
                             android:id="@+id/detectedText"
+                            android:layout_margin="50dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=""
@@ -57,7 +60,9 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/button_detect"
-                            app:layout_constraintVertical_bias="1.0" />
+                            app:layout_constraintVertical_bias="1.0"
+                            android:textIsSelectable="true"/>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
