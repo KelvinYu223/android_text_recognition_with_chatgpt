@@ -36,7 +36,6 @@ import okhttp3.Response;
 
 public class ChatMain extends AppCompatActivity {
 
-    Button detectButton;
     RecyclerView recyclerView;
     TextView welcomeTextView;
     EditText messageEditText;
@@ -88,7 +87,8 @@ public class ChatMain extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.disclaimer:
-                Toast.makeText(this, "Disclaimer", Toast.LENGTH_SHORT).show();
+                Intent aboutIntent = new Intent(this, About.class);
+                startActivity(aboutIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

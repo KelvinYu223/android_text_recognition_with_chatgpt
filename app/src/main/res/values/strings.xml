@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyTextRecognition</string>
+    <string name="hyperlink1"><a href="http://home.nr.no/~eikvil/OCR.pdf">Go to reference</a></string>
+    <string name="hyperlink2"><a href="https://developer.android.com/studio/intro">Go to reference</a></string>
+    <string name="hyperlink3"><a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=6a4b4f04d5ce3c3592832eb40c23cc8fc5a9131e">Go to reference</a></string>
+    <string name="hyperlink4"><a href="https://arxiv.org/ftp/arxiv/papers/1710/1710.05703.pdf">Go to reference</a></string>
 </resources>

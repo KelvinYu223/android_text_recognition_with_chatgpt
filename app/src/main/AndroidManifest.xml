@@ -42,6 +42,11 @@
             android:parentActivityName=".ChatMain"
             android:label="Recognize Text"
             android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"/>
+
+        <activity android:name=".About"
+            android:parentActivityName=".ChatMain"
+            android:label="About"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"/>
     </application>
 
 </manifest>

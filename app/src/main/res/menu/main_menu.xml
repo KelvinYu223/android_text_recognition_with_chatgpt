@@ -9,7 +9,7 @@
 
     <item
         android:id="@+id/disclaimer"
-        android:title="Disclaimer"
+        android:title="About"
         app:showAsAction="never">
 
     </item>
