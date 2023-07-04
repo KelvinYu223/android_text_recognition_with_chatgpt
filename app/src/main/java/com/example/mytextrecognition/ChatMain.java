@@ -25,6 +25,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -45,7 +46,9 @@ public class ChatMain extends AppCompatActivity {
 
     public static final MediaType JSON
             = MediaType.get("application/json; charset=utf-8");
-    OkHttpClient client = new OkHttpClient();
+    OkHttpClient client = new OkHttpClient().newBuilder()
+            .readTimeout(40, TimeUnit.SECONDS)
+            .build();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
