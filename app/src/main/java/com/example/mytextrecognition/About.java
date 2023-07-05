@@ -34,5 +34,8 @@ public class About extends AppCompatActivity {
 
         linkTextView = findViewById(R.id.hyperlink6);
         linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        linkTextView = findViewById(R.id.hyperlink7);
+        linkTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
