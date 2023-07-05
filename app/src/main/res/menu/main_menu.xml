@@ -8,8 +8,15 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/disclaimer"
+        android:id="@+id/about"
         android:title="About"
+        app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:id="@+id/instruction"
+        android:title="Instruction"
         app:showAsAction="never">
 
     </item>
