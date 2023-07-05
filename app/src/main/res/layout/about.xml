@@ -164,6 +164,16 @@
                 app:layout_constraintEnd_toEndOf="@+id/textView11"
                 app:layout_constraintStart_toStartOf="@+id/textView11"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <TextView
+                android:id="@+id/hyperlink7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hyperlink7"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/hyperlink6"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
