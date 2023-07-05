@@ -89,10 +89,13 @@ public class ChatMain extends AppCompatActivity {
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 return true;
-            case R.id.disclaimer:
+            case R.id.about:
                 Intent aboutIntent = new Intent(this, About.class);
                 startActivity(aboutIntent);
                 return true;
+            case R.id.instruction:
+                Intent instructionIntent = new Intent(this, Instruction.class);
+                startActivity(instructionIntent);
             default:
                 return super.onOptionsItemSelected(item);
         }
