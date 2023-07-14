@@ -38,18 +38,19 @@
             android:layout_toLeftOf="@id/send_btn"
             android:background="@drawable/rounded_corner"
             />
+
         <ImageButton
+            android:id="@+id/send_btn"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/send_btn"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
-            android:padding="8dp"
-            android:src="@drawable/ic_baseline_send_24"
             android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
 
-            />
+            android:src="@drawable/ic_baseline_send_24"
+            android:tint="@color/purple_200" />
 
 
     </RelativeLayout>
