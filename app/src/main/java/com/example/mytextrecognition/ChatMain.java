@@ -35,7 +35,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class ChatMain extends AppCompatActivity {
+public class ChatMain extends AppCompatActivity implements api_dialog.ApiDialogListener {
 
     RecyclerView recyclerView;
     TextView welcomeTextView;
@@ -93,12 +93,24 @@ public class ChatMain extends AppCompatActivity {
                 Intent aboutIntent = new Intent(this, About.class);
                 startActivity(aboutIntent);
                 return true;
+            case R.id.api:
+                openDialog();
+                return true;
             case R.id.instruction:
                 Intent instructionIntent = new Intent(this, Instruction.class);
                 startActivity(instructionIntent);
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    public void openDialog() {
+        api_dialog ApiDialog = new api_dialog();
+        ApiDialog.show(getSupportFragmentManager(), "example dialog");
+    }
+    @Override
+    public void applyText(String api) {
+//        EditText UserApi = null;
+//        UserApi.setText(api);
     }
 
     void addToChat(String message,String sentBy){
@@ -139,6 +151,7 @@ public class ChatMain extends AppCompatActivity {
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
                 .header("Authorization","Bearer"+"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")
+                //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
                 .post(body)
                 .build();
 
