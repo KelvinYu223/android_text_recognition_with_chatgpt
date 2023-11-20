@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class api_dialog extends AppCompatDialogFragment {
+public class Api_Dialog extends AppCompatDialogFragment {
     private EditText editApi;
     private ApiDialogListener listener;
 
