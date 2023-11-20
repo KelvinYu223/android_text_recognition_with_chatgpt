@@ -41,6 +41,7 @@ public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogL
     ImageButton sendButton;
     List<Message> messageList;
     MessageAdapter messageAdapter;
+    private String UserApi;
 
     public static final MediaType JSON
             = MediaType.get("application/json; charset=utf-8");
@@ -103,12 +104,12 @@ public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogL
     }
     public void openDialog() {
         Api_Dialog ApiDialog = new Api_Dialog();
-        ApiDialog.show(getSupportFragmentManager(), "example dialog");
+        ApiDialog.show(getSupportFragmentManager(), "api dialog");
     }
+
     @Override
     public void applyText(String api) {
-//        EditText UserApi = null;
-//        UserApi.setText(api);
+        UserApi = api;
     }
 
     void addToChat(String message,String sentBy){
@@ -146,10 +147,10 @@ public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogL
             e.printStackTrace();
         }
         RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
+
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization","Bearer"+"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")
-                //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
+                .header("Authorization","Bearer"+ " " + UserApi)
                 .post(body)
                 .build();
 
