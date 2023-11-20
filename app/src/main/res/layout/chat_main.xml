@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="Ask Your Question"
+        android:text="Welcome"
         android:textSize="28dp" />
 
     <RelativeLayout
