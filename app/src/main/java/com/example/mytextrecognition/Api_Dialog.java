@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class Api_Dialog extends AppCompatDialogFragment {
+public class Api_Dialog extends AppCompatDialogFragment{
     private EditText editApi;
     private ApiDialogListener listener;
 
@@ -34,7 +35,11 @@ public class Api_Dialog extends AppCompatDialogFragment {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String api = editApi.getText().toString();
-                        listener.applyText(api);
+                        if (api.isEmpty()){
+                            Toast.makeText(getActivity(),"Text Field is empty!!",Toast.LENGTH_SHORT).show();
+                        } else{
+                            listener.applyText(api);
+                        }
                     }
                 });
 
