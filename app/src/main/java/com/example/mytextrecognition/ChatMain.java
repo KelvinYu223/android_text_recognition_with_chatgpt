@@ -6,11 +6,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,7 +33,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class ChatMain extends AppCompatActivity implements api_dialog.ApiDialogListener {
+public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogListener {
 
     RecyclerView recyclerView;
     TextView welcomeTextView;
@@ -104,7 +102,7 @@ public class ChatMain extends AppCompatActivity implements api_dialog.ApiDialogL
         }
     }
     public void openDialog() {
-        api_dialog ApiDialog = new api_dialog();
+        Api_Dialog ApiDialog = new Api_Dialog();
         ApiDialog.show(getSupportFragmentManager(), "example dialog");
     }
     @Override
