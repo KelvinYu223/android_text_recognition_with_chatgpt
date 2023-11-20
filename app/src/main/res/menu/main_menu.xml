@@ -15,6 +15,14 @@
     </item>
 
     <item
+        android:id="@+id/api"
+        android:title="Enter Your API"
+        app:showAsAction="never">
+
+    </item>
+
+
+    <item
         android:id="@+id/instruction"
         android:title="Instruction"
         app:showAsAction="never">
