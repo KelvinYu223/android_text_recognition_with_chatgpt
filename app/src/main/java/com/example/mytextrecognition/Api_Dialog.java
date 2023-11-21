@@ -39,6 +39,7 @@ public class Api_Dialog extends AppCompatDialogFragment{
                             Toast.makeText(getActivity(),"Text Field is empty!!",Toast.LENGTH_SHORT).show();
                         } else{
                             listener.applyText(api);
+                            Toast.makeText(getActivity(), "API saved", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

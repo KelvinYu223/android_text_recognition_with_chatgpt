@@ -1,6 +1,7 @@
 package com.example.mytextrecognition;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -41,13 +42,18 @@ public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogL
     ImageButton sendButton;
     List<Message> messageList;
     MessageAdapter messageAdapter;
+
     private String UserApi;
+    private String SavedApi;
 
     public static final MediaType JSON
             = MediaType.get("application/json; charset=utf-8");
     OkHttpClient client = new OkHttpClient().newBuilder()
             .readTimeout(60, TimeUnit.SECONDS)
             .build();
+
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String API = "yourApi";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -110,6 +116,19 @@ public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogL
     @Override
     public void applyText(String api) {
         UserApi = api;
+        saveData();
+    }
+
+    public void saveData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(API, UserApi);
+        editor.apply();
+    }
+
+    public void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        SavedApi = sharedPreferences.getString(API, "");
     }
 
     void addToChat(String message,String sentBy){
@@ -129,6 +148,7 @@ public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogL
     }
 
     void callAPI(String question){
+        loadData();
         //okhttp
         messageList.add(new Message("Typing... ",Message.SENT_BY_BOT));
 
@@ -150,7 +170,7 @@ public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogL
 
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization","Bearer"+ " " + UserApi)
+                .header("Authorization","Bearer"+ " " + SavedApi)
                 .post(body)
                 .build();
 
