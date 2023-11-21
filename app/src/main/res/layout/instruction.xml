@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
-            android:text="Click the Write here to enter your question.\n Click three dot to use text recognition \n and check about page."
+            android:text="Click the Write here to enter your question.\n Click three dot to use text recognition, enter API \n and check about page."
             android:textAlignment="center"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
