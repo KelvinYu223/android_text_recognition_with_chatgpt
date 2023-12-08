@@ -197,7 +197,7 @@ public class ChatMain extends AppCompatActivity implements Api_Dialog.ApiDialogL
 
 
                 }else{
-                    addResponse("Failed to load response due to "+response.body().toString());
+                    addResponse("Failed to load response due to "+response.body().string());
                 }
             }
         });
