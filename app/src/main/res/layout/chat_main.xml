@@ -17,7 +17,7 @@
         android:id="@+id/welcome_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="195sp"
+        android:layout_centerVertical="true"
         android:gravity="center"
         android:text="Welcome.\nReply speed depends on OpenAI.\nYou must use your own API to start a chat."
         android:textSize="28dp" />
