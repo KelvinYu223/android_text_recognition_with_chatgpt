@@ -140,7 +140,7 @@
                 android:id="@+id/hyperlink5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hyperlink4"
+                android:text="@string/hyperlink5"
                 app:layout_constraintEnd_toEndOf="@+id/textView10"
                 app:layout_constraintStart_toStartOf="@+id/textView10"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -160,7 +160,7 @@
                 android:id="@+id/hyperlink6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hyperlink4"
+                android:text="@string/hyperlink6"
                 app:layout_constraintEnd_toEndOf="@+id/textView11"
                 app:layout_constraintStart_toStartOf="@+id/textView11"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
